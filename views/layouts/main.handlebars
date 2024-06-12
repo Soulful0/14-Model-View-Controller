@@ -56,6 +56,23 @@
     <link rel="stylesheet" media="all" href="/css/style.css" />
     <link href="css/bootstrap.min.css" rel="stylesheet" />
   </head>
+  <header class="header-container">
+    <div class="nav">
+      {{#if logged_in}}
+        <a class="header-options" href="/home">Home</a>
+        <a class="header-options" href="/dashboard">Dashboard</a>
+        <a class="header-options" href="/login" id="logout">Logout</a>
+      {{else}}
+        <a class="header-options" href="/login">Login</a>
+        <a class="header-options" href="/signup">Signup</a>
+      {{/if}}
+    </div>
+    <div class="hero-logo">
+      <a>
+        <h1 class="logo-style">The Tech Blog</h1>
+      </a>
+    </div>
+  </header>
   <body>
     {{{body}}}
   </body>
